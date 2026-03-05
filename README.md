@@ -74,12 +74,16 @@ The Vite build is configured for GitHub Pages under the repo path `/brainfog-dec
 
 ## Deployment
 
-Deployment is handled through GitHub Actions and GitHub Pages.
+Deployment is handled through GitHub Pages using the `gh-pages` branch.
 
-- Every push to `main` triggers a production build
-- The built site is published to GitHub Pages
-- The expected public URL is:
+- `main` contains the source code
+- `gh-pages` contains the built static output from `dist/`
+- The public URL is:
   `https://eybmits.github.io/brainfog-decision-tree/`
 
-See [docs/PROJECT_NOTES.md](/Users/superposition/Coding/brainfog/docs/PROJECT_NOTES.md) for implementation notes and extension ideas.
+To republish after future changes:
 
+1. run `npm run build`
+2. publish the contents of `dist/` to the `gh-pages` branch
+
+See [docs/PROJECT_NOTES.md](/Users/superposition/Coding/brainfog/docs/PROJECT_NOTES.md) for implementation notes and extension ideas.
