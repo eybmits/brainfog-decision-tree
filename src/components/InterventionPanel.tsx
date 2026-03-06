@@ -22,8 +22,15 @@ export function InterventionPanel({ node, onRestart }: InterventionPanelProps) {
           aria-live="polite"
         >
           <span className="side-card-kicker">Intervention</span>
-          <h3>{node.title} is still open</h3>
-          <p>{node.intervention.whyItMatters}</p>
+          <h3>{node.title} is the first baseline to fix</h3>
+          <p>
+            The tree stops here on purpose. Going deeper is less useful until this
+            factor becomes stable enough to count as covered.
+          </p>
+          <div className="panel-callout">
+            <span>Why the route stopped</span>
+            <strong>{node.intervention.whyItMatters}</strong>
+          </div>
           <div className="side-card-block">
             <span>Next small step</span>
             <p>{node.intervention.nextStep}</p>
@@ -32,8 +39,11 @@ export function InterventionPanel({ node, onRestart }: InterventionPanelProps) {
             <span>What improvement looks like</span>
             <p>{node.intervention.improvementSignal}</p>
           </div>
+          <p className="panel-footnote">
+            Once this area looks genuinely better, rerun the tree and continue down the route.
+          </p>
           <button type="button" className="ghost-button" onClick={onRestart}>
-            Start over
+            Run the tree again
           </button>
         </motion.aside>
       ) : null}

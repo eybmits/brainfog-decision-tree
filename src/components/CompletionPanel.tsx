@@ -21,21 +21,28 @@ export function CompletionPanel({ visible, onRestart }: CompletionPanelProps) {
           aria-live="polite"
         >
           <span className="side-card-kicker">Path complete</span>
-          <h3>The baseline factors already look covered</h3>
+          <h3>The visible baseline pass looks clear</h3>
           <p>
-            In this demo, the major day-to-day interventions are already marked as
-            optimized. That does not rule out every other cause, but the obvious
-            basics have been cleared.
+            In this route, the high-signal day-to-day basics are already marked as
+            covered. That does not rule out every other cause, but the most obvious
+            baseline levers are no longer the weak link.
           </p>
+          <div className="panel-callout panel-callout-success">
+            <span>What this result means</span>
+            <strong>The tree did not find an early baseline break point.</strong>
+          </div>
           <div className="side-card-block">
             <span>What this MVP proves</span>
             <p>
-              The structure shows how a brainfog check can feel like a visual,
-              animated decision tree instead of a static questionnaire.
+              A brainfog check can feel like a cinematic, visible decision system
+              instead of a static questionnaire or a wall of text.
             </p>
           </div>
+          <p className="panel-footnote">
+            If symptoms still persist in a real workflow, the next layer would usually be deeper diagnostics, not more guesswork.
+          </p>
           <button type="button" className="ghost-button" onClick={onRestart}>
-            Start over
+            Re-run the route
           </button>
         </motion.aside>
       ) : null}
